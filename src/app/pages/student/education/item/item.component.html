@@ -1,0 +1,41 @@
+  <div class="topSideWrapper d-flex align-items-center">
+    <h3 class="m-0 flex-grow-1">{{data.courseTitle}}</h3>
+    <div class="badge badge-lg badge-light-primary">{{data.grade}}</div>
+  </div>
+  <!-- ---------- -->
+  <app-custom-card [header]="{customClass: 'rounded-0'}">
+    <div class="d-flex flex-column ">
+      <!--begin::Avatar-->
+      <div class="d-flex align-items-start">
+        <div class="symbol symbol-100px symbol-circle">
+          <img [src]="'assets/images/user/' + data.teacher.avatar" alt="image">
+        </div>
+        <!-- ---- -->
+        <div class="d-flex flex-column ms-4 flex-grow-1">
+          <!--begin::Name-->
+          <a href="#" class="fs-3 text-gray-800 text-hover-primary fw-bolder">{{data.teacher.fullName}}</a>
+          <!--begin::description-->
+          <p class="text-gray-400 mb-5">{{data.teacher.role}}</p>
+          <!--begin::Position-->
+          <div class="mb-0">
+            <div class="badge badge-light-danger d-inline">{{data.type}}</div>
+          </div>
+        </div>
+        <!-- --- -->
+        <div class="mt-1">
+          <app-custom-star [checkedCount]="data.teacher.rate"></app-custom-star>
+        </div>
+
+      </div>
+    </div>
+  </app-custom-card>
+  <!-- ---------- -->
+  <div class="bottomSideWrapper d-flex align-items-center rounded-bottom bg-white px-10 py-4">
+    <h3 class="flex-grow-1 mb-0">
+      {{data.price}}
+      <span>تومان</span>
+    </h3>
+    <!-- --- -->
+    <a href="#" class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#kt_modal_new_target">افزودن
+      به سبد خرید</a>
+  </div>

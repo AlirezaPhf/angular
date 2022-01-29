@@ -1,0 +1,12 @@
+<app-custom-toolbar title="لیست دروس" [hasSearch]="true">
+  <app-custom-filter customClass="btn-white">
+    <app-education-filter></app-education-filter>
+  </app-custom-filter>
+</app-custom-toolbar>
+<!-- --- -->
+<div class="row">
+  <div class="col-4 mb-5" *ngFor="let item of data">
+    <app-education-item class="cursor-pointer" [data]="item" [routerLink]="'/student/education/' + item.id">
+    </app-education-item>
+  </div>
+</div>

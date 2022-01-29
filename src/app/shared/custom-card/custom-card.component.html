@@ -1,0 +1,15 @@
+<div [class]="header && header.customClass ? header.customClass : 'mb-5' " class="card">
+  <div *ngIf="header && (header.text || header.description)" class="card-header">
+    <!-- Title-->
+    <h3 class="card-title align-items-start flex-column">
+      <span *ngIf="header.text" class="card-label fw-bolder fs-3 mb-1">{{header.text}}</span>
+      <span *ngIf="header.description" class="text-muted fw-bold fs-7">{{header.description}}</span>
+    </h3>
+
+    <!-- Toolbar -->
+
+  </div>
+  <div class="card-body" [class]="header && header.bodyClass ?? header.bodyClass">
+    <ng-content></ng-content>
+  </div>
+</div>
