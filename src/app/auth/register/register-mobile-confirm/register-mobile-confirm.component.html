@@ -1,0 +1,59 @@
+<form class="form w-100 mb-10" novalidate="novalidate" id="kt_sing_in_two_steps_form">
+  <!--begin::Icon-->
+  <div class="text-center mb-10">
+    <img alt="Logo" class="mh-125px" src="assets/images/smartphone.svg">
+  </div>
+  <!--end::Icon-->
+  <!--begin::Heading-->
+  <div class="text-center mb-10">
+    <!--begin::Title-->
+    <h1 class="text-dark mb-3">تایید شماره موبایل</h1>
+    <!--end::Title-->
+    <!--begin::Sub-title-->
+    <div class="text-muted fw-bold fs-5 mb-5">کد اعتبارسنجی ارسال شده به شماره زیر را وارد نمایید</div>
+    <!--end::Sub-title-->
+    <!--begin::Mobile no-->
+    <div dir="ltr" class="fw-bolder text-dark fs-3">0915*****43</div>
+    <!--end::Mobile no-->
+  </div>
+  <!--end::Heading-->
+  <!--begin::Section-->
+  <div class="mb-10 px-md-10">
+    <!--begin::Label-->
+    <div class="fw-bolder text-start text-dark fs-6 mb-1 ms-1">کد امنیتی 6 رقمی را وارد نمایید</div>
+    <!--end::Label-->
+    <!--begin::Input group-->
+    <div class="d-flex flex-wrap flex-row-reverse flex-stack">
+      <input type="text" dir="ltr" maxlength="1"
+        class="form-control form-control-solid h-60px w-60px fs-2qx text-center border-primary border-hover mx-1 my-2"
+        value="3" inputmode="text">
+      <input type="text" dir="ltr" maxlength="1"
+        class="form-control form-control-solid h-60px w-60px fs-2qx text-center border-primary border-hover mx-1 my-2"
+        value="0" inputmode="text">
+      <input type="text" dir="ltr" maxlength="1"
+        class="form-control form-control-solid h-60px w-60px fs-2qx text-center border-primary border-hover mx-1 my-2"
+        value="7" inputmode="text">
+      <input type="text" dir="ltr" maxlength="1"
+        class="form-control form-control-solid h-60px w-60px fs-2qx text-center border-primary border-hover mx-1 my-2"
+        value="" inputmode="text">
+      <input type="text" dir="ltr" maxlength="1"
+        class="form-control form-control-solid h-60px w-60px fs-2qx text-center border-primary border-hover mx-1 my-2"
+        value="" inputmode="text">
+      <input type="text" dir="ltr" maxlength="1"
+        class="form-control form-control-solid h-60px w-60px fs-2qx text-center border-primary border-hover mx-1 my-2"
+        value="" inputmode="text">
+    </div>
+    <!--begin::Input group-->
+  </div>
+  <!--end::Section-->
+  <!--begin::Submit-->
+  <div class="d-flex flex-center">
+    <button type="button" id="kt_sing_in_two_steps_submit" class="btn btn-lg btn-primary fw-bolder"
+      routerLink="/auth/register/info">
+      <span class="indicator-label">تایید شماره موبایل</span>
+      <span class="indicator-progress">Please wait...
+        <span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
+    </button>
+  </div>
+  <!--end::Submit-->
+</form>

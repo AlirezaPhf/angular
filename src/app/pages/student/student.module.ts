@@ -6,6 +6,7 @@ import { routes } from "./student.routing";
 import { EducationItemComponent } from './education/item/item.component';
 import { EducationFilterComponent } from './education/filter/filter.component';
 import { EducationDetailComponent } from './education/detail/detail.component';
+import { LessonsComponent } from './lessons/lessons.component';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { EducationDetailComponent } from './education/detail/detail.component';
     EducationComponent,
     EducationItemComponent,
     EducationFilterComponent,
-    EducationDetailComponent
+    EducationDetailComponent,
+    LessonsComponent
   ],
   imports: [
     RouterModule.forChild(routes),

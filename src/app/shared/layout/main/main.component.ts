@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MainService } from 'src/app/core/services/main.service';
 
 @Component({
   selector: 'app-main-layout',
@@ -6,10 +7,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./main.component.scss']
 })
 export class MainLayoutComponent implements OnInit {
-
-  constructor() { }
+  minimizedAside = 'off';
+  // ---
+  constructor(
+    private mainService: MainService
+  ) { }
 
   ngOnInit(): void {
+    this.getAsideType();
+  }
+
+  getAsideType(): void {
+    this.mainService.minimizedAside.subscribe(
+      x => this.minimizedAside = x
+    )
   }
 
 }

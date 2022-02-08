@@ -1,0 +1,128 @@
+<!--begin::Step 3-->
+<!--begin::Wrapper-->
+<div class="w-100">
+  <!--begin::Heading-->
+  <div class="pb-10 pb-lg-12">
+    <!--begin::Title-->
+    <h2 class="fw-bolder text-dark">اطلاعات شخصی</h2>
+    <!--end::Title-->
+    <!--begin::Notice-->
+    <div class="text-muted fw-bold fs-6">اطلاعات شخصی شما پیش ما محفوظ است</div>
+    <!--end::Notice-->
+  </div>
+  <!--end::Heading-->
+  <!--begin::Input group-->
+  <div class="mb-10 row">
+    <div class="col-6">
+      <!--begin::Label-->
+      <label class="form-label required">نام</label>
+      <!--end::Label-->
+      <!--begin::Input-->
+      <input name="business_name" class="form-control form-control-lg form-control-solid">
+      <!--end::Input-->
+    </div>
+    <!-- --- -->
+    <div class="col-6">
+      <!--begin::Label-->
+      <label class="form-label required">نام خانوادگی</label>
+      <!--end::Label-->
+      <!--begin::Input-->
+      <input name="business_name" class="form-control form-control-lg form-control-solid">
+      <!--end::Input-->
+    </div>
+  </div>
+  <!--end::Input group-->
+
+  <!--begin::Input group-->
+  <div class="row mb-10">
+    <div class="col-8">
+      <!--begin::Label-->
+      <label class="form-label required">کد ملی</label>
+      <!--end::Label-->
+      <!--begin::Input-->
+      <input name="business_descriptor" class="form-control form-control-lg form-control-solid">
+      <!--end::Input-->
+      <!--begin::Hint-->
+      <div class="form-text">برای تکمیل ثبت نام، نیاز به ارسال کپی کارت ملی را دارید</div>
+      <!--end::Hint-->
+    </div>
+    <div class="col-4">
+      <label class="form-label required">تاریخ تولد</label>
+      <div class="customDatepickerWrapper">
+        <input class="form-control form-control-lg form-control-solid" [matDatepicker]="picker">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </div>
+    </div>
+  </div>
+  <!--begin::Input group-->
+  <div class="mb-10">
+    <!--begin::Label-->
+    <label class="form-label required">ایمیل</label>
+    <!--end::Label-->
+    <!--begin::Input-->
+    <input name="business_descriptor" class="form-control form-control-lg form-control-solid">
+    <!--end::Input-->
+  </div>
+  <!--end::Input group-->
+  <!--begin::Input group-->
+  <div class="row mb-10">
+    <div class="col-6">
+      <label class="form-label">مدرک تحصیلی</label>
+      <!--end::Label-->
+      <!--begin::Input-->
+      <select name="" id="" class="form-select form-select-solid">
+        <option value="">دیپلم</option>
+        <option value="">کارشناسی</option>
+        <option value="">کارشناسی ارشد</option>
+        <option value="">دکترا</option>
+      </select>
+    </div>
+    <!-- --- -->
+    <div class="col-6">
+      <!--begin::Label-->
+      <label class="form-label required">رشته تحصیلی</label>
+      <!--end::Label-->
+      <!--begin::Input-->
+      <input name="business_descriptor" class="form-control form-control-lg form-control-solid">
+      <!--end::Input-->
+    </div>
+
+  </div>
+  <!--end::Input group-->
+  <!--begin::Input group-->
+  <div class="mb-0">
+    <!--begin::Label-->
+    <label class="fs-6 fw-bold form-label required">آدرس کامل</label>
+    <!--end::Label-->
+    <!--begin::Input-->
+    <textarea name="business_description" class="form-control form-control-lg form-control-solid" rows="3"></textarea>
+    <!--end::Input-->
+  </div>
+  <!--end::Input group-->
+</div>
+<!--end::Wrapper-->
+
+
+<!--begin::Actions-->
+<div class="d-flex justify-content-end pt-15">
+  <button type="button" class="btn btn-lg btn-primary" routerLink="/">ثبت نام
+    <span class="ms-1 me-0 svg-icon svg-icon-4">
+      <!--begin::Svg Icon | path:/var/www/preview.keenthemes.com/metronic/releases/2021-05-14-112058/theme/html/demo1/dist/../src/media/svg/icons/Navigation/Arrow-left.svg--><svg
+        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px"
+        viewBox="0 0 24 24" version="1.1">
+        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+          <polygon points="0 0 24 0 24 24 0 24" />
+          <rect fill="#000000" opacity="0.3"
+            transform="translate(12.000000, 12.000000) scale(-1, 1) rotate(-90.000000) translate(-12.000000, -12.000000) "
+            x="11" y="5" width="2" height="14" rx="1" />
+          <path
+            d="M3.7071045,15.7071045 C3.3165802,16.0976288 2.68341522,16.0976288 2.29289093,15.7071045 C1.90236664,15.3165802 1.90236664,14.6834152 2.29289093,14.2928909 L8.29289093,8.29289093 C8.67146987,7.914312 9.28105631,7.90106637 9.67572234,8.26284357 L15.6757223,13.7628436 C16.0828413,14.136036 16.1103443,14.7686034 15.7371519,15.1757223 C15.3639594,15.5828413 14.7313921,15.6103443 14.3242731,15.2371519 L9.03007346,10.3841355 L3.7071045,15.7071045 Z"
+            fill="#000000" fill-rule="nonzero"
+            transform="translate(9.000001, 11.999997) scale(-1, -1) rotate(90.000000) translate(-9.000001, -11.999997) " />
+        </g>
+      </svg>
+      <!--end::Svg Icon--></span>
+  </button>
+</div>
+<!--end::Actions-->

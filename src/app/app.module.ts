@@ -4,6 +4,7 @@ import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
 import { routes } from './app.routing';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -12,7 +13,8 @@ import { routes } from './app.routing';
   imports: [
     BrowserModule,
     RouterModule.forRoot(routes),
-    SharedModule
+    SharedModule,
+    NoopAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
