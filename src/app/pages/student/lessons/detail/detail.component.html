@@ -1,0 +1,199 @@
+<!--begin::Notice-->
+<div class="notice d-flex bg-light-warning rounded border-warning border border-dashed p-6">
+  <!--begin::Icon-->
+  <!--begin::Svg Icon | path: icons/duotone/Code/Warning-1-circle.svg-->
+  <span class="svg-icon svg-icon-2tx svg-icon-warning me-4">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+      <circle fill="#000000" opacity="0.3" cx="12" cy="12" r="10" />
+      <rect fill="#000000" x="11" y="7" width="2" height="8" rx="1" />
+      <rect fill="#000000" x="11" y="16" width="2" height="2" rx="1" />
+    </svg>
+  </span>
+  <!--end::Svg Icon-->
+  <!--end::Icon-->
+  <!--begin::Wrapper-->
+  <div class="d-flex flex-stack flex-grow-1">
+    <!--begin::Content-->
+    <div class="fw-bold">
+      <h4 class="text-gray-900 fw-bolder">تاییدیه کلاس</h4>
+      <div class="fs-6 text-gray-700">
+        آیا این کلاس با مشخصات زیر مورد تایید میباشد ؟
+      </div>
+    </div>
+    <!--end::Content-->
+  </div>
+  <!--end::Wrapper-->
+
+  <div class="d-flex align-items-center">
+    <a href="javascript:void(0)" class="btn btn-primary px-6 align-self-center text-nowrap">تایید</a>
+    <a href="#" class="btn btn-light btn-active-light-primary ms-2">
+      انصراف
+    </a>
+  </div>
+</div>
+
+
+<form [formGroup]="form">
+  <!-- -------------- -->
+  <div class="mt-5">
+    <app-custom-toolbar title="پروفایل درس"></app-custom-toolbar>
+    <!-- --- -->
+    <app-custom-card>
+      <div class="row">
+        <div class="col-lg-2 mb-4">
+          <label class="required fs-5 fw-bold mb-2">کد درس</label>
+          <input type="text" class="form-control form-control-solid" formControlName="code">
+        </div>
+        <div class="col-lg-5 mb-4">
+          <label class="required fs-5 fw-bold mb-2">نام درس</label>
+          <input type="text" class="form-control form-control-solid " formControlName="lessonName">
+        </div>
+        <div class="col-lg-5 mb-4">
+          <label class="required fs-5 fw-bold mb-2">نام استاد</label>
+          <input type="text" class="form-control form-control-solid" formControlName="teacherName">
+        </div>
+        <!-- -------------- -->
+        <div class="col-lg-3 mt-4">
+          <label class="required fs-5 fw-bold mb-2">امتیاز</label>
+          <input type="text" class="form-control form-control-solid" formControlName="scoin">
+        </div>
+        <div class="col-lg-3 mt-4">
+          <label class="required fs-5 fw-bold mb-2">وضعیت</label>
+          <select class="form-select form-select-solid" formControlName="status">
+            <option value="در حال برگزاری">در حال برگزاری</option>
+            <option value="ارائه شده">ارائه شده</option>
+            <option value="کنسل شده">کنسل شده</option>
+          </select>
+        </div>
+        <div class="col-lg-3 mt-4">
+          <label class="required fs-5 fw-bold mb-2">نوع درس</label>
+          <select class="form-select form-select-solid" formControlName="typeOfCourse">
+            <option value="حضوری">حضوری</option>
+            <option value="غیرحضوری">غیرحضوری</option>
+          </select>
+        </div>
+        <div class="col-lg-3 mt-4">
+          <label class="required fs-5 fw-bold mb-2">تعداد جلسات</label>
+          <input type="number" class="form-control form-control-solid" formControlName="numberOfSessions">
+        </div>
+      </div>
+    </app-custom-card>
+
+  </div>
+
+
+  <!-- ---------------- -->
+  <div class="mt-5">
+    <app-custom-toolbar title="برنامه کلاسی">
+      <a class="btn btn-sm btn-bg-white btn-active-primary" (click)="openDialog('schedule')">
+        <!--begin::Svg Icon | path: icons/duotune/arrows/arr075.svg-->
+        <span class="svg-icon svg-icon-3">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <rect opacity="0.5" x="11.364" y="20.364" width="16" height="2" rx="1" transform="rotate(-90 11.364 20.364)"
+              fill="black"></rect>
+            <rect x="4.36396" y="11.364" width="16" height="2" rx="1" fill="black"></rect>
+          </svg>
+        </span>
+        <!--end::Svg Icon-->
+        افزودن زمان‌بندی به کلاس
+      </a>
+    </app-custom-toolbar>
+    <!-- --- -->
+    <div class="row">
+      <ng-container *ngFor="let item of itemData.schedule">
+        <div class="col-lg-4 mb-5" *ngIf="item.lessons.length > 0">
+          <app-custom-card [header]="{text: item.name, description: item.nameEn, customClass: 'h-100'}">
+            <div class="item" *ngFor="let lesson of item.lessons; let i = index"
+              [class.mb-7]="item.lessons.length !== i + 1 ">
+              <div class="position-relative d-flex align-items-center">
+                <div class="position-absolute start-0 top-0 w-4px h-100 rounded-2 bg-primary"></div>
+                <div class="d-flex flex-column flex-grow-1 ms-4">
+                  <h4 class="mb-0">
+                    <span>{{lesson.start}}</span>
+                    الی
+                    <span>{{lesson.end}}</span>
+                  </h4>
+                </div>
+                <!-- --- -->
+
+
+              </div>
+            </div>
+          </app-custom-card>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+
+
+  <!-- ---------------- -->
+  <div class="mt-5" *ngIf="itemData && itemData.students.length > 0">
+    <app-custom-toolbar title="لیست افراد">
+      <a class="btn btn-sm btn-bg-white btn-active-primary" (click)="openDialog('addUser')">
+        <!--begin::Svg Icon | path: icons/duotune/arrows/arr075.svg-->
+        <span class="svg-icon svg-icon-3">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <rect opacity="0.5" x="11.364" y="20.364" width="16" height="2" rx="1" transform="rotate(-90 11.364 20.364)"
+              fill="black"></rect>
+            <rect x="4.36396" y="11.364" width="16" height="2" rx="1" fill="black"></rect>
+          </svg>
+        </span>
+        <!--end::Svg Icon-->
+        افزودن کاربر جدید به کلاس
+      </a>
+    </app-custom-toolbar>
+    <!-- --- -->
+    <app-custom-card>
+      <app-custom-table [tableConfig]="tableConfig" [tableData]="itemData.students"></app-custom-table>
+    </app-custom-card>
+  </div>
+
+
+
+
+  <!-- -------------- -->
+  <!-- -------------- -->
+  <div class="mt-5">
+    <app-custom-toolbar title="مالی"></app-custom-toolbar>
+    <!-- --- -->
+    <app-custom-card>
+      <div class="row">
+        <div class="col-lg-4 mb-4">
+          <label class="required fs-5 fw-bold mb-2">قیمت کل دوره</label>
+          <input type="text" class="form-control form-control-solid">
+        </div>
+        <div class="col-lg-4 mb-4">
+          <label class="required fs-5 fw-bold mb-2">درآمد ناخالص</label>
+          <input type="text" class="form-control form-control-solid">
+        </div>
+        <div class="col-lg-4 mb-4">
+          <label class="required fs-5 fw-bold mb-2">درصد سود خالص</label>
+          <input type="text" class="form-control form-control-solid">
+        </div>
+        <!-- -------------- -->
+        <div class="col-lg-4 mt-4">
+          <label class="required fs-5 fw-bold mb-2">حق تدریس استاد</label>
+          <input type="text" class="form-control form-control-solid">
+        </div>
+        <div class="col-lg-4 mt-4">
+          <label class="required fs-5 fw-bold mb-2">مبلغ واریز شده به استاد</label>
+          <input type="text" class="form-control form-control-solid">
+        </div>
+        <div class="col-lg-4 mt-4">
+          <label class="required fs-5 fw-bold mb-2">سود خالص</label>
+          <input type="text" class="form-control form-control-solid">
+        </div>
+      </div>
+    </app-custom-card>
+
+  </div>
+
+
+
+
+  <div class="separator mb-5"></div>
+  <div class="d-flex justify-content-end">
+    <button type="submit" class="btn btn-primary">ثبت تغییرات</button>
+  </div>
+
+</form>

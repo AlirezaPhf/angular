@@ -28,6 +28,11 @@ export const routes: Routes = [
         component: RegisterLayoutComponent,
         children: [
             {
+                path: '',
+                redirectTo: '/auth/register/type',
+                pathMatch: 'full'
+            },
+            {
                 path: 'type',
                 component: RegisterTypeComponent
             },

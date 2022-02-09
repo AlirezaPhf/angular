@@ -1,0 +1,36 @@
+<app-custom-toolbar title="برنامه کلاسی"></app-custom-toolbar>
+<!-- --- -->
+
+<div class="row">
+  <div class="col-lg-4 mb-5" *ngFor="let item of studentSchedule">
+    <app-custom-card [header]="{text: item.name, description: item.nameEn, customClass: 'h-100'}">
+      <ng-container *ngIf="item.lessons.length>0;else notFound">
+        <div class="item" *ngFor="let lesson of item.lessons; let i = index"
+          [class.mb-7]="item.lessons.length !== i + 1 ">
+          <div class="position-relative d-flex align-items-center">
+            <div class="position-absolute start-0 top-0 w-4px h-100 rounded-2 bg-primary"></div>
+            <div class="d-flex flex-column flex-grow-1 ms-4">
+              <h4 class="mb-0">{{lesson.name}}</h4>
+              <small class="text-muted">{{lesson.teacherName}}</small>
+            </div>
+            <!-- --- -->
+            <div class="schTime">
+              <span>{{lesson.start}}</span>
+              الی
+              <span>{{lesson.end}}</span>
+            </div>
+
+
+          </div>
+        </div>
+      </ng-container>
+      <!-- --- -->
+      <ng-template #notFound>
+        <p class="text-center mb-0">
+          <app-not-found title="برای این روز از هفته هیچ درسی موجود نمی‌باشد." imgClass="w-150px"></app-not-found>
+        </p>
+      </ng-template>
+    </app-custom-card>
+  </div>
+</div>
+<!-- --- -->

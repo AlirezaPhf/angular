@@ -18,7 +18,7 @@
     <!--end::Table head-->
     <!--begin::Table body-->
     <tbody class="fw-bold text-gray-600">
-      <tr class="odd" *ngFor="let item of tableData">
+      <tr class="odd" *ngFor="let item of tableData; let itemIndex = index" (click)="onClickRow(itemIndex, item)">
         <!--begin::Checkbox-->
         <td *ngIf="tableConfig.selectable">
           <div class="form-check form-check-sm form-check-custom form-check-solid">

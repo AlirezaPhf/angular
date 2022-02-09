@@ -17,6 +17,10 @@ import { MatInputModule } from '@angular/material/input';
 import { DateAdapter, MAT_DATE_FORMATS, MAT_DATE_LOCALE } from '@angular/material/core';
 import { MaterialPersianDateAdapter, PERSIAN_DATE_FORMATS } from '../core/adapter/material.persian-date.adapter';
 import { IncludeTextPipe } from './pipe/include-text.pipe';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { CustomMessageBoxComponent } from './custom-message-box/custom-message-box.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -32,13 +36,18 @@ import { IncludeTextPipe } from './pipe/include-text.pipe';
     AuthComponent,
     CustomTableComponent,
     RegisterLayoutComponent,
-    IncludeTextPipe
+    IncludeTextPipe,
+    NotFoundComponent,
+    CustomMessageBoxComponent
   ],
   imports: [
     CommonModule,
     RouterModule,
     MatDatepickerModule,
-    MatInputModule
+    MatInputModule,
+    MatDialogModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   exports: [
     CommonModule,
@@ -51,7 +60,11 @@ import { IncludeTextPipe } from './pipe/include-text.pipe';
     MainLayoutComponent,
     MatDatepickerModule,
     MatInputModule,
-    IncludeTextPipe
+    MatDialogModule,
+    IncludeTextPipe,
+    NotFoundComponent,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     { provide: DateAdapter, useClass: MaterialPersianDateAdapter, deps: [MAT_DATE_LOCALE] },
