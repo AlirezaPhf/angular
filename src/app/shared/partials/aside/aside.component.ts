@@ -9,6 +9,8 @@ import { MainService } from 'src/app/core/services/main.service';
 export class AsideComponent implements OnInit {
   minimizedAside = false;
   // ---
+  animating = false;
+  // ---
   constructor(
     private mainService: MainService
   ) { }
@@ -18,6 +20,12 @@ export class AsideComponent implements OnInit {
 
   onToggleAside() {
     this.minimizedAside = !this.minimizedAside;
+    // ---
+    this.animating = true;
+    // ---
+    setTimeout(() => {
+      this.animating = false;
+    }, 100);
     // ---
     this.mainService.minimizedAside.emit(this.minimizedAside ? 'on' : 'off');
   }

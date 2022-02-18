@@ -1,0 +1,111 @@
+<app-custom-card [header]="{text: 'ویرایش اطلاعات کاربری'}">
+
+
+  <form [formGroup]="form">
+
+    <!--begin::Row-->
+    <div class="row align-items-center mb-7">
+      <!--begin::Label-->
+      <label class="col-lg-4 col-form-label required fw-bold fs-6">نام</label>
+      <!--end::Label-->
+
+      <!--begin::Col-->
+      <div class="col-lg-4">
+        <input formControlName="name" class="form-control form-control-lg form-control-solid">
+      </div>
+      <!--end::Col-->
+
+    </div>
+    <!--end::Row-->
+
+
+    <!--begin::Row-->
+    <div class="row align-items-center mb-7">
+      <!--begin::Label-->
+      <label class="col-lg-4 col-form-label required fw-bold fs-6">نام خانوادگی</label>
+      <!--end::Label-->
+
+      <!--begin::Col-->
+      <div class="col-lg-4">
+        <input formControlName="family" class="form-control form-control-lg form-control-solid">
+      </div>
+      <!--end::Col-->
+
+    </div>
+    <!--end::Row-->
+
+
+
+    <!--begin::Input group-->
+    <div class="row align-items-center mb-7">
+      <!--begin::Label-->
+      <label class="col-lg-4 col-form-label required fw-bold fs-6">تاریخ تولد</label>
+      <!--end::Label-->
+      <!--begin::Col-->
+      <div class="col-lg-4">
+        <div class="customDatepickerWrapper">
+          <input formControlName="birthDay" class="form-control form-control-lg form-control-solid"
+            [matDatepicker]="picker">
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </div>
+      </div>
+      <!--end::Col-->
+    </div>
+    <!--end::Input group-->
+
+    <!--begin::Input group-->
+    <div class="row align-items-center mb-7">
+      <!--begin::Label-->
+      <label class="col-lg-4 col-form-label required fw-bold fs-6">مدرک تحصیلی</label>
+      <!--end::Label-->
+      <!--begin::Col-->
+      <div class="col-lg-4">
+        <select formControlName="evidence" class="form-select form-select-solid">
+          <option [value]="1">دیپلم</option>
+          <option [value]="2">کارشناسی</option>
+          <option [value]="3">کارشناسی ارشد</option>
+          <option [value]="4">دکترا</option>
+        </select>
+      </div>
+      <!--end::Col-->
+    </div>
+    <!--end::Input group-->
+
+
+    <!--begin::Row-->
+    <div class="row align-items-center mb-7">
+      <!--begin::Label-->
+      <label class="col-lg-4 col-form-label required fw-bold fs-6">رشته تحصیلی</label>
+      <!--end::Label-->
+
+      <!--begin::Col-->
+      <div class="col-lg-4">
+        <input formControlName="family" class="form-control form-control-lg form-control-solid">
+      </div>
+      <!--end::Col-->
+    </div>
+    <!--end::Row-->
+
+
+
+    <!--begin::Row-->
+    <div class="row align-items-top mb-7">
+      <!--begin::Label-->
+      <label class="col-lg-4 col-form-label required fw-bold fs-6">آدرس کامل</label>
+      <!--end::Label-->
+
+      <!--begin::Col-->
+      <div class="col-lg-4">
+        <textarea formControlName="address" class="form-control form-control-lg form-control-solid" rows="3"></textarea>
+      </div>
+      <!--end::Col-->
+    </div>
+    <!--end::Row-->
+  </form>
+
+  <div class="d-flex justify-content-end py-6  border-top">
+    <button type="submit" class="btn btn-primary" id="kt_account_profile_details_submit">ذخیره تغییرات</button>
+  </div>
+
+</app-custom-card>

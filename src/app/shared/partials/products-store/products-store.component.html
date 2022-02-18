@@ -1,0 +1,12 @@
+<app-custom-toolbar title="محصولات فروشگاه" [hasSearch]="false"></app-custom-toolbar>
+<app-custom-card [header]="{text: 'محصولات خریداری شده'}">
+  <app-custom-table [tableConfig]="tableConfig" [tableData]="boughtData" (rowClicked)="onClickRow($event, 'bought')">
+  </app-custom-table>
+</app-custom-card>
+
+<!-- --- -->
+
+<app-custom-card [header]="{text: 'محصولات من'}">
+  <app-custom-table [tableConfig]="tableConfig" [tableData]="boughtData" (rowClicked)="onClickRow($event, 'myCourses')">
+  </app-custom-table>
+</app-custom-card>

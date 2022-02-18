@@ -1,0 +1,12 @@
+<h1 mat-dialog-title>{{data && data.title ? data.title : 'عنوان دیالوگ را وارد نمایید'}}</h1>
+<div mat-dialog-content>
+  <p class="mb-0">
+    {{
+        data && data.description ? data.description : 'توضیحات دیالوگ را وارد نمایید'
+    }}
+  </p>
+</div>
+<div mat-dialog-actions class="d-flex justify-content-end">
+  <button class="btn btn-light btn-active-light-primary ">انصراف</button>
+  <button class="btn btn-primary align-self-center text-nowrap ms-2" cdkFocusInitial>بله</button>
+</div>

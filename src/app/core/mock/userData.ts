@@ -12,7 +12,11 @@ export const userData: IUser[] = [
         avatar: 'assets/images/user/1.jpg',
         city: 'مشهد',
         email: 'mhKoohjani@gmail.com',
-        mobileNumber: '09215154197'
+        mobileNumber: '09215154197',
+        nationalCode: '0924068888',
+        birthDay: '1997/08/26',
+        evidence: 3,
+        fieldOfStudy: 'نرم افزار',
     },
     {
         key: "2",
@@ -25,7 +29,11 @@ export const userData: IUser[] = [
         avatar: 'assets/images/user/1.jpg',
         city: 'مشهد',
         email: 'mhKoohjani@gmail.com',
-        mobileNumber: '09215154197'
+        mobileNumber: '09215154197',
+        nationalCode: '0924068888',
+        birthDay: '1997/08/26',
+        evidence: 3,
+        fieldOfStudy: 'نرم افزار',
     },
     {
         key: "3",
@@ -38,7 +46,11 @@ export const userData: IUser[] = [
         avatar: 'assets/images/user/1.jpg',
         city: 'مشهد',
         email: 'mhKoohjani@gmail.com',
-        mobileNumber: '09215154197'
+        mobileNumber: '09215154197',
+        nationalCode: '0924068888',
+        birthDay: '1997/08/26',
+        evidence: 3,
+        fieldOfStudy: 'نرم افزار',
     },
     {
         key: "4",
@@ -51,7 +63,11 @@ export const userData: IUser[] = [
         avatar: 'assets/images/user/1.jpg',
         city: 'مشهد',
         email: 'mhKoohjani@gmail.com',
-        mobileNumber: '09215154197'
+        mobileNumber: '09215154197',
+        nationalCode: '0924068888',
+        birthDay: '1997/08/26',
+        evidence: 3,
+        fieldOfStudy: 'نرم افزار',
     },
     {
         key: "5",
@@ -64,7 +80,11 @@ export const userData: IUser[] = [
         avatar: 'assets/images/user/1.jpg',
         city: 'مشهد',
         email: 'mhKoohjani@gmail.com',
-        mobileNumber: '09215154197'
+        mobileNumber: '09215154197',
+        nationalCode: '0924068888',
+        birthDay: '1997/08/26',
+        evidence: 3,
+        fieldOfStudy: 'نرم افزار',
     },
     {
         key: "6",
@@ -77,7 +97,11 @@ export const userData: IUser[] = [
         avatar: 'assets/images/user/1.jpg',
         city: 'مشهد',
         email: 'mhKoohjani@gmail.com',
-        mobileNumber: '09215154197'
+        mobileNumber: '09215154197',
+        nationalCode: '0924068888',
+        birthDay: '1997/08/26',
+        evidence: 3,
+        fieldOfStudy: 'نرم افزار',
     },
     {
         key: "7",
@@ -90,7 +114,11 @@ export const userData: IUser[] = [
         avatar: 'assets/images/user/1.jpg',
         city: 'مشهد',
         email: 'mhKoohjani@gmail.com',
-        mobileNumber: '09215154197'
+        mobileNumber: '09215154197',
+        nationalCode: '0924068888',
+        birthDay: '1997/08/26',
+        evidence: 3,
+        fieldOfStudy: 'نرم افزار',
     },
     {
         key: "8",
@@ -103,7 +131,11 @@ export const userData: IUser[] = [
         avatar: 'assets/images/user/1.jpg',
         city: 'مشهد',
         email: 'mhKoohjani@gmail.com',
-        mobileNumber: '09215154197'
+        mobileNumber: '09215154197',
+        nationalCode: '0924068888',
+        birthDay: '1997/08/26',
+        evidence: 3,
+        fieldOfStudy: 'نرم افزار',
     },
     {
         key: "9",
@@ -116,7 +148,11 @@ export const userData: IUser[] = [
         avatar: 'assets/images/user/1.jpg',
         city: 'مشهد',
         email: 'mhKoohjani@gmail.com',
-        mobileNumber: '09215154197'
+        mobileNumber: '09215154197',
+        nationalCode: '0924068888',
+        birthDay: '1997/08/26',
+        evidence: 3,
+        fieldOfStudy: 'نرم افزار',
     },
     {
         key: "10",
@@ -129,7 +165,11 @@ export const userData: IUser[] = [
         avatar: 'assets/images/user/1.jpg',
         city: 'مشهد',
         email: 'mhKoohjani@gmail.com',
-        mobileNumber: '09215154197'
+        mobileNumber: '09215154197',
+        nationalCode: '0924068888',
+        birthDay: '1997/08/26',
+        evidence: 3,
+        fieldOfStudy: 'نرم افزار',
     },
     {
         key: "11",
@@ -142,7 +182,11 @@ export const userData: IUser[] = [
         avatar: 'assets/images/user/1.jpg',
         city: 'مشهد',
         email: 'mhKoohjani@gmail.com',
-        mobileNumber: '09215154197'
+        mobileNumber: '09215154197',
+        nationalCode: '0924068888',
+        birthDay: '1997/08/26',
+        evidence: 3,
+        fieldOfStudy: 'نرم افزار',
     },
     {
         key: "12",
@@ -155,7 +199,11 @@ export const userData: IUser[] = [
         avatar: 'assets/images/user/1.jpg',
         city: 'مشهد',
         email: 'mhKoohjani@gmail.com',
-        mobileNumber: '09215154197'
+        mobileNumber: '09215154197',
+        nationalCode: '0924068888',
+        birthDay: '1997/08/26',
+        evidence: 3,
+        fieldOfStudy: 'نرم افزار',
     },
     {
         key: "13",
@@ -168,7 +216,11 @@ export const userData: IUser[] = [
         avatar: 'assets/images/user/1.jpg',
         city: 'مشهد',
         email: 'mhKoohjani@gmail.com',
-        mobileNumber: '09215154197'
+        mobileNumber: '09215154197',
+        nationalCode: '0924068888',
+        birthDay: '1997/08/26',
+        evidence: 3,
+        fieldOfStudy: 'نرم افزار',
     },
     {
         key: "14",
@@ -181,6 +233,10 @@ export const userData: IUser[] = [
         avatar: 'assets/images/user/1.jpg',
         city: 'مشهد',
         email: 'mhKoohjani@gmail.com',
-        mobileNumber: '09215154197'
+        mobileNumber: '09215154197',
+        nationalCode: '0924068888',
+        birthDay: '1997/08/26',
+        evidence: 3,
+        fieldOfStudy: 'نرم افزار',
     },
 ];

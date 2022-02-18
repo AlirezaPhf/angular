@@ -21,6 +21,10 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { CustomMessageBoxComponent } from './custom-message-box/custom-message-box.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ProfileLayoutComponent } from './layout/profile-layout/profile-layout.component';
+import { ProductsStoreComponent } from './partials/products-store/products-store.component';
+import { LiberationItemsComponent } from './partials/liberation-items/liberation-items.component';
+import { CustomConfirmDgComponent } from './custom-confirm-dg/custom-confirm-dg.component';
 
 
 @NgModule({
@@ -38,7 +42,11 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     RegisterLayoutComponent,
     IncludeTextPipe,
     NotFoundComponent,
-    CustomMessageBoxComponent
+    CustomMessageBoxComponent,
+    ProfileLayoutComponent,
+    ProductsStoreComponent,
+    LiberationItemsComponent,
+    CustomConfirmDgComponent
   ],
   imports: [
     CommonModule,
@@ -58,6 +66,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     CustomTableComponent,
     AsideComponent,
     MainLayoutComponent,
+    ProductsStoreComponent,
+    LiberationItemsComponent,
+    CustomConfirmDgComponent,
     MatDatepickerModule,
     MatInputModule,
     MatDialogModule,

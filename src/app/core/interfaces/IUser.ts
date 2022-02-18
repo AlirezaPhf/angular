@@ -10,4 +10,8 @@ export interface IUser {
     city: string;
     email: string;
     mobileNumber: string;
+    nationalCode: string;
+    birthDay: string;
+    evidence: number;
+    fieldOfStudy: string;
 }
